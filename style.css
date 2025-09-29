@@ -1,0 +1,418 @@
+/* ======================== */
+/* GAYA UMUM */
+/* ======================== */
+body {
+
+    
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d0364;
+    color: #ff4949;
+}
+
+header {
+    background: #84888d;
+    color: rgb(255, 255, 255);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease; /* Transisi untuk hover */
+}
+
+nav a:hover {
+    color: #007bff; /* Efek hover sederhana */
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('images/background.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+.cta-button {
+    /* Gaya ini kini berlaku untuk <a> */
+    text-decoration: none; /* Hapus garis bawah standar dari tautan */
+    display: inline-block; /* Agar padding dan margin berfungsi */
+    text-align: center; /* Memastikan teks di tengah */
+    
+    background-color: #fffb07;
+    color: rgb(20, 14, 14);
+    padding: 15px 30px; /* Sedikit lebih besar agar menonjol */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 25px; /* Tambahkan sedikit ruang */
+}
+
+.profile-pic {
+    width: 200px; /* Atur ukuran gambar */
+    height: 200px;
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    object-fit: cover; /* Memastikan gambar terpotong rapi dalam lingkaran */
+    margin-bottom: 20px;
+    border: 5px solid white; /* Border awal */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ======================== */
+/* GAYA UMUM (Lanjutan) */
+/* ======================== */
+
+/* Gaya untuk semua section selain hero */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.projects-section h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #ffffff;
+}
+
+/* Tata Letak Grid */
+.project-grid {
+    display: grid;
+    /* Membuat kolom responsif: minimal 300px per kolom */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Gaya Kartu Proyek */
+.project-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk Hover */
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    color: #222;
+    margin: 15px 0 10px;
+    padding: 0 15px;
+}
+
+.project-card p {
+    color: #666;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #007bff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* ======================== */
+/* GAYA UMUM (Lanjutan) */
+/* ======================== */
+
+.about-section {
+    background-color: white;
+    padding: 80px 20px;
+    color: #333;
+}
+
+.about-section h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #007bff;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.about-content p {
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+/* Gaya tombol kontak (menggunakan kembali .cta-button) */
+.about-content .cta-button {
+    margin-top: 30px;
+    /* Menghapus animasi pulse agar tidak terlalu mengganggu di sini, 
+       atau biarkan jika Anda suka */
+    animation: none;
+    background-color: #333;
+}
+
+.about-content .cta-button:hover {
+    background-color: #007bff;
+}
+
+
+/* ======================== */
+/* GAYA UMUM (Lanjutan) */
+/* ======================== */
+
+.contact-section {
+    background-color: #ffffff; /* Kontras dengan bagian About yang putih */
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #525151;
+    border-radius: 5px;
+    box-sizing: border-box; /* Agar padding tidak melebarkan input */
+    font-size: 1em;
+}
+
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* Gaya khusus untuk tombol Kirim Pesan */  
+
+.bounce-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    margin-top: 10px;
+    /* Ganti warna agar berbeda dari CTA utama jika mau */
+    background-color: #4881fd; 
+    border: none;
+    cursor: pointer;
+    color: rgb(19, 19, 19);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.bounce-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* ======================== */
+/* DEFINISI ANIMASI */
+/* ======================== */
+
+/* 1. Animasi Fade In */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 2. Animasi Slide Up */
+@keyframes slideUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* 3. Animasi Pulse (Berdenyut) untuk tombol CTA */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* 4. Animasi Border Grow */
+@keyframes borderGrow {
+    0% {
+        border-color: rgba(255, 255, 255, 0.3); /* Border samar */
+        transform: scale(0.95);
+    }
+    100% {
+        border-color: #007bff; /* Border berwarna */
+        transform: scale(1);
+    }
+}
+
+
+
+/* ======================== */
+/* APLIKASI ANIMASI */
+/* ======================== */
+
+.fade-in {
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.slide-up {
+    /* Animasi dimulai setelah fadeIn selesai (delay 1s) */
+    animation: slideUp 1s ease-out 1s forwards; 
+    opacity: 0; /* Mulai tersembunyi */
+}
+
+.pulse {
+    /* Animasi berulang tanpa batas */
+    animation: pulse 1.5s infinite;
+    transition: background-color 0.3s;
+}
+
+.pulse:hover {
+    background-color: #0056b3; /* Efek hover saat animasi berdenyut */
+}
+
+.border-grow {
+    /* Animasi berjalan selama 1.5 detik, sekali, dan berhenti di frame terakhir */
+    animation: borderGrow 1.5s ease-out forwards;
+}
+
+
+
+/* ======================== */
+/* DEFINISI ANIMASI (Lanjutan) */
+/* ======================== */
+
+/* 7. Animasi Slide In dari Bawah (Untuk Judul) */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 8. Animasi Bounce (Memantul) */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+
+
+/* ======================== */
+/* APLIKASI ANIMASI (Lanjutan) */
+/* ======================== */
+
+/* 1. Animasi Hover pada Kartu Proyek */
+.project-card:hover {
+    /* Mengangkat kartu proyek dan membuatnya tampak lebih besar */
+    transform: translateY(-10px) scale(1.02); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Kelas ini akan ditambahkan oleh JavaScript/AOS saat elemen masuk viewport */
+/* .fade-in-scroll.visible { 
+    opacity: 1;
+    transform: translateY(0);
+} */
+
+
+
+
+
+/* ======================== */
+/* APLIKASI ANIMASI (Lanjutan) */
+/* ======================== */
+
+/* Animasi untuk Judul dan Deskripsi Kontak */
+.slide-in-up {
+    animation: slideInUp 0.8s ease-out forwards;
+}
+
+/* Animasi slide-in dan delay untuk setiap input */
+.input-slide-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideInUp 0.7s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+.delay-4 { animation-delay: 1.2s; }
+.delay-5 { animation-delay: 1.5s; }
+
+/* Animasi Bounce pada tombol kirim */
+
+/* ======================== */
+/* APLIKASI ANIMASI (Diperbarui) */
+/* ======================== */
+
+/* ... (Animasi fade-in, slide-up, pulse, dll. yang sudah ada) ... */
+
+/* Gaya Awal untuk Animasi Saat Gulir */
+
+
+/* KELAS YANG DIPICU JAVASCRIPT */
+.fade-in-scroll.visible { 
+    opacity: 1;
+    transform: translateY(0);
+}
